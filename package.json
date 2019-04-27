@@ -9,6 +9,7 @@
     "node": "9.10.0"
   },
   "bin": {
+    "jpg2png": "./bin/jpg2png.js",
     "xml2json": "./bin/xml2json.js",
     "xrgb": "./bin/xrgb.js"
   },
