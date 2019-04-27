@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Matthieu Lassalvy",
   "license": "MIT",
+  "engines": {
+    "node": "9.10.0"
+  },
   "bin": {
     "xml2json": "./bin/xml2json.js",
     "xrgb": "./bin/xrgb.js"
@@ -30,6 +33,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "fs-extra": "^7.0.1",
+    "sharp": "^0.22.1",
     "xml2json": "^0.11.2"
   }
 }
