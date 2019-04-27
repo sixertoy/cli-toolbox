@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Matthieu Lassalvy",
   "license": "MIT",
+  "bin": {
+    "xml2json": "./bin/xml2json.js"
+  },
   "devDependencies": {
     "babel-eslint": "10.0.1",
     "eslint": "^5.16.0",
@@ -22,5 +25,9 @@
     "stylelint-config-standard": "18.3.0",
     "stylelint-order": "3.0.0",
     "stylelint-scss": "3.6.0"
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "xml2json": "^0.11.2"
   }
 }
