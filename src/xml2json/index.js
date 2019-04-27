@@ -37,6 +37,7 @@ async function run () {
   const xml = await fse.readFile(inputfile);
   const json = xmlparser.toJson(xml);
   await fse.outputFile(outputpath, json);
+  process.exit(0);
 }
 
 // eslint-disable-next-line no-console
