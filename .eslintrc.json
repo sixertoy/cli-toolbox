@@ -23,11 +23,7 @@
     "simple-import-sort/sort": 2,
     "sort-destructure-keys/sort-destructure-keys": 2,
     "sort-imports": "off",
-    "sort-keys": [
-      2,
-      "asc",
-      { "caseSensitive": true, "natural": false, "minKeys": 2 }
-    ],
+    "sort-keys": [2, "asc"],
     "simple-import-sort/sort": 2,
     "sort-imports": "off",
     "sort-keys-fix/sort-keys-fix": 2

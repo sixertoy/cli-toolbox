@@ -1,4 +1,4 @@
-function outputToRGBColor (hex) {
+function outputToRGBColor(hex) {
   let str = hex;
   if (hex.length === 3) {
     str = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;

@@ -2,18 +2,18 @@ const torgb = require('./torgb');
 const isvalidhex = require('./isvalid-hex');
 const isvalidrgb = require('./isvalid-rgb');
 const outputToHexadecimalColor = require('./tohex');
-const { parseCommandArguments } = require('./../utils');
+const { parseCommandArguments } = require("../utils");
 
 const args = parseCommandArguments();
 
-function outputRandomColor () {
+function outputRandomColor() {
   const colors = Array.from({ length: 3 }, () =>
     Math.floor(Math.random() * 255)
   ).join(',');
   outputToHexadecimalColor(['rgb', colors]);
 }
 
-function run () {
+function run() {
   if (!args || !args.length) {
     outputRandomColor();
     process.exit(0);

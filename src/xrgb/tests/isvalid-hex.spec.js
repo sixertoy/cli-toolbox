@@ -1,26 +1,21 @@
-/* eslint
-  func-names: 0
-  prefer-arrow-callback: 0 */
+const isvalid = require('../isvalid-hex');
 
-const { assert } = require('chai');
-const isvalid = require('./../isvalid-hex');
-
-describe('Valid Color HEX Formats', function () {
-  it('should fail', function () {
-    assert.equal(isvalid(''), false);
-    assert.equal(isvalid('1'), false);
-    assert.equal(isvalid('#FF'), false);
-    assert.equal(isvalid('#F1'), false);
-    assert.equal(isvalid('#F1F1'), false);
-    assert.equal(isvalid('123456'), false);
-    assert.equal(isvalid('1234567'), false);
-    assert.equal(isvalid('#FFGFFF'), false);
-    assert.equal(isvalid('#FFFFFFF'), false);
+describe('Valid Color HEX Formats', () => {
+  it('should fail', () => {
+    expect(isvalid('')).toEqual(false);
+    expect(isvalid('1')).toEqual(false);
+    expect(isvalid('#FF')).toEqual(false);
+    expect(isvalid('#F1')).toEqual(false);
+    expect(isvalid('#F1F1')).toEqual(false);
+    expect(isvalid('123456')).toEqual(false);
+    expect(isvalid('1234567')).toEqual(false);
+    expect(isvalid('#FFGFFF')).toEqual(false);
+    expect(isvalid('#FFFFFFF')).toEqual(false);
   });
-  it('should pass', function () {
-    assert.equal(isvalid('#FFF'), true);
-    assert.equal(isvalid('#123'), true);
-    assert.equal(isvalid('#FFFFFF'), true);
-    assert.equal(isvalid('#ACE539'), true);
+  it('should pass', () => {
+    expect(isvalid('#FFF')).toEqual(true);
+    expect(isvalid('#123')).toEqual(true);
+    expect(isvalid('#FFFFFF')).toEqual(true);
+    expect(isvalid('#ACE539')).toEqual(true);
   });
 });

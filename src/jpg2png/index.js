@@ -1,12 +1,12 @@
 const path = require('path');
 const sharp = require('sharp');
 const fse = require('fs-extra');
-const { askQuestion, parseCommandArguments } = require('./../utils');
+const { askQuestion, parseCommandArguments } = require('../utils');
 
 const commargs = parseCommandArguments();
 if (!commargs || !commargs.length) throw new Error('Missing arguments');
 
-function getOutputFileFromInputFile (inputpath, extension) {
+function getOutputFileFromInputFile(inputpath, extension) {
   const ouputdir = path.dirname(inputpath);
   const inputext = path.extname(inputpath);
   const ouputname = path.basename(inputpath).replace(inputext, extension);
@@ -14,7 +14,7 @@ function getOutputFileFromInputFile (inputpath, extension) {
   return outputpath;
 }
 
-async function outputFile (inputpath, outputpath) {
+async function outputFile(inputpath, outputpath) {
   const promise = new Promise((resolve, reject) => {
     sharp(inputpath)
       .png()
@@ -26,7 +26,7 @@ async function outputFile (inputpath, outputpath) {
   return promise;
 }
 
-async function run () {
+async function run() {
   const cwd = process.cwd();
   const inputpath = path.join(cwd, commargs[0]);
 

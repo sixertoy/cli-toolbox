@@ -1,12 +1,12 @@
 const path = require('path');
 const fse = require('fs-extra');
 const xmlparser = require('xml2json');
-const { askQuestion, parseCommandArguments } = require('./../utils');
+const { askQuestion, parseCommandArguments } = require('../utils');
 
 const commargs = parseCommandArguments();
 if (!commargs || !commargs.length) throw new Error('Missing arguments');
 
-function getOutputFileFromInputFile (inputfile, extension) {
+function getOutputFileFromInputFile(inputfile, extension) {
   const ouputdir = path.dirname(inputfile);
   const inputext = path.extname(inputfile);
   const ouputname = path.basename(inputfile).replace(inputext, extension);
@@ -14,7 +14,7 @@ function getOutputFileFromInputFile (inputfile, extension) {
   return outputpath;
 }
 
-async function run () {
+async function run() {
   const cwd = process.cwd();
   const inputfile = path.join(cwd, commargs[0]);
 

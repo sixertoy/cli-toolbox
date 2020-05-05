@@ -1,9 +1,9 @@
-function transform (color) {
+function transform(color) {
   const str = `0${color.toString(16)}`;
   return str.slice(-2);
 }
 
-function outputToHexadecimalColor (matches) {
+function outputToHexadecimalColor(matches) {
   const alpha =
     matches[0] === 'rgba' && matches.length === 3 ? parseFloat(matches[2]) : 1;
   const colors = matches[1].split(',').map(v => parseInt(v, 10));

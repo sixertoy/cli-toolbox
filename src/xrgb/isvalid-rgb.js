@@ -1,4 +1,4 @@
-function isValidRGB (str) {
+function isValidRGB(str) {
   const rgbregex = new RegExp(
     // eslint-disable-next-line no-useless-escape
     /^(rgba?)\(([0-9]{1,3},[0-9]{1,3},[0-9]{1,3})\,?([0-9]*\.*[0-9]*)?\)$/,

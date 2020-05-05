@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('./../src/xrgb/index.js');
+require("../src/xrgb/index.js");
